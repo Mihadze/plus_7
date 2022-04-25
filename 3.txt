@@ -1,0 +1,39 @@
+1
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+    system("chcp 65001");
+    string str;
+    ifstream fin("proverka.txt");
+    int n;
+    cout << "Введите чисо строк";
+    cin >> n;
+    for (int i = 1; i <= n; ++i){
+        getline(fin, str);
+        {
+            cout << str << endl;
+        }
+    }    
+    fin.close();
+    return 0;
+}
+
+2
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+    system("chcp 65001");
+    int n = 42;    
+    char* buffer = new char[n+1]; buffer[n]=0;
+    ifstream file("proverka.txt");
+    file.read(buffer,n);
+    cout << buffer;
+    file.close();
+    return 0;
+}

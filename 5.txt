@@ -1,0 +1,15 @@
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main(){
+    system("chcp 65001");
+    ofstream file("proverka.txt");
+    string msg;
+    cout<<"ВВедите сообщение"<<endl;
+    cin>>msg;
+    file<<msg;
+    file.close();
+    return 0;
+}

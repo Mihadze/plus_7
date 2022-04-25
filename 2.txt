@@ -1,0 +1,15 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+    system("chcp 65001");
+    string str;
+    ifstream fin("proverka.txt");
+    while (fin >> str)
+        {
+            cout << str << endl;
+        }
+    fin.close();
+    return 0;
+}
